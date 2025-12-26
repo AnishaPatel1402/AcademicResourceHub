@@ -19,12 +19,12 @@ public class Subject {
     
     
  // Many subjects → One branch
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "branch_id")
     private Branch branch;
 
     // Many subjects → One semester
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "semester_id")
     private Semester semester;
     

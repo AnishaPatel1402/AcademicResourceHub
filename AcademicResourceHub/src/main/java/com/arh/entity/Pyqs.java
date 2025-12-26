@@ -6,18 +6,29 @@ import jakarta.persistence.*;
 @Table(name = "pyqs")
 public class Pyqs {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int id;
 
-    private int year;
-    private String fileName;
-    private String filePath;
-    
-    // Many PYQs → One subject
-    @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "subject_id")
-    private Subject subject;
+	private int year;
+	private String fileName;
+	private String filePath;
+
+	// Many PYQs → One subject
+	@ManyToOne(fetch = FetchType.EAGER)
+	@JoinColumn(name = "subject_id")
+	private Subject subject;
+
+	@Transient
+	private int subjectId;
+
+	public int getSubjectId() {
+		return subjectId;
+	}
+
+	public void setSubjectId(int subjectId) {
+		this.subjectId = subjectId;
+	}
 
 	public int getId() {
 		return id;
@@ -58,7 +69,5 @@ public class Pyqs {
 	public void setSubject(Subject subject) {
 		this.subject = subject;
 	}
-    
-    
 
 }

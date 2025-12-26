@@ -70,8 +70,8 @@
         <a href="manage_semester.jsp"><i class="bi bi-layers me-2"></i> Manage Semesters</a>
         <a href="manage_subject.jsp"><i class="bi bi-journal-code me-2"></i> Manage Subjects</a>
         <a href="upload_notes.jsp"><i class="bi bi-file-earmark-pdf me-2"></i> Upload Notes</a>
-        <a href="upload_pyq.jsp"><i class="bi bi-archive me-2"></i> Upload PYQs</a>
-        <a href="manage_resources.jsp"><i class="bi bi-collection me-2"></i> All Resources</a>
+        <a href="upload_pyqs.jsp"><i class="bi bi-archive me-2"></i> Upload PYQs</a>
+        <a href="manage_resourses.jsp"><i class="bi bi-collection me-2"></i> All Resources</a>
         <a href="logout.jsp" class="mt-3 text-danger"><i class="bi bi-box-arrow-right me-2"></i> Logout</a>
     </div>
 
@@ -177,7 +177,7 @@
                             <h5 class="fw-bold">Upload PYQs</h5>
                             <p class="text-muted">Upload Previous Year Papers</p>
                         </div>
-                        <a href="upload_pyq.jsp" class="btn btn-sm btn-info text-white ms-auto">Upload</a>
+                        <a href="upload_pyqs.jsp" class="btn btn-sm btn-info text-white ms-auto">Upload</a>
                     </div>
                 </div>
             </div>

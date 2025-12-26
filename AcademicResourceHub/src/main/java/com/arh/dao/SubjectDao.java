@@ -74,6 +74,17 @@ public class SubjectDao {
 		}
 	}
 	
+	public static Subject getSubject(int id) {
+		EntityManagerFactory factory = JPAUtil.getFactory();
+		try (EntityManager manager = factory.createEntityManager();) {
+		return manager.find(Subject.class, id);
+		
+		} catch (Exception e) {
+			e.printStackTrace();
+			throw new RuntimeException(e.getMessage());
+		}
+	}
+	
 	public static List<Subject> getAllSubjects() {
 	    EntityManagerFactory factory = JPAUtil.getFactory();
 	    EntityManager manager = factory.createEntityManager();

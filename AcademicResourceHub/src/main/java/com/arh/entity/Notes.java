@@ -22,7 +22,6 @@ public class Notes {
     private int subjectId;
     
     
-    
 	public int getSubjectId() {
 		return subjectId;
 	}
